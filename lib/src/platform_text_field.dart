@@ -98,6 +98,7 @@ class MaterialTextFieldData {
     this.smartQuotesType,
     this.selectionHeightStyle,
     this.selectionWidthStyle,
+    this.obscuringCharacter,
   });
 
   final Key widgetKey;
@@ -144,6 +145,7 @@ class MaterialTextFieldData {
   final SmartQuotesType smartQuotesType;
   final ui.BoxHeightStyle selectionHeightStyle;
   final ui.BoxWidthStyle selectionWidthStyle;
+  final String obscuringCharacter;
 }
 
 class CupertinoTextFieldData {
@@ -198,6 +200,7 @@ class CupertinoTextFieldData {
     this.smartQuotesType,
     this.selectionHeightStyle,
     this.selectionWidthStyle,
+    this.obscuringCharacter,
   });
 
   final Key widgetKey;
@@ -250,6 +253,7 @@ class CupertinoTextFieldData {
   final SmartQuotesType smartQuotesType;
   final ui.BoxHeightStyle selectionHeightStyle;
   final ui.BoxWidthStyle selectionWidthStyle;
+  final String obscuringCharacter;
 }
 
 class PlatformTextField
@@ -309,6 +313,8 @@ class PlatformTextField
   final ui.BoxHeightStyle selectionHeightStyle;
   final ui.BoxWidthStyle selectionWidthStyle;
 
+  final String obscuringCharacter;
+
   PlatformTextField({
     Key key,
     this.widgetKey,
@@ -351,6 +357,7 @@ class PlatformTextField
     this.smartQuotesType,
     this.selectionHeightStyle,
     this.selectionWidthStyle,
+    this.obscuringCharacter,
     this.android,
     this.ios,
     this.material,
@@ -420,6 +427,7 @@ class PlatformTextField
       selectionWidthStyle: data?.selectionWidthStyle ??
           selectionWidthStyle ??
           ui.BoxWidthStyle.tight,
+      obscuringCharacter: data?.obscuringCharacter ?? obscuringCharacter ?? '•',
     );
   }
 
@@ -496,6 +504,7 @@ class PlatformTextField
       selectionWidthStyle: data?.selectionWidthStyle ??
           selectionWidthStyle ??
           ui.BoxWidthStyle.tight,
+      obscuringCharacter: data?.obscuringCharacter ?? obscuringCharacter ?? '•',
     );
   }
 }
